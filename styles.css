@@ -1,0 +1,114 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #FFF9E6;
+    color: #2D2D2D;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Левое меню */
+  .sidebar {
+    background: #FFF9E6;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .sidebar h2 {
+    color: #D2B0F3;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+  }
+  
+  .sidebar nav a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #2D2D2D;
+    transition: color 0.3s;
+  }
+  
+  .sidebar nav a:hover {
+    color: #D2B0F3;
+  }
+  
+  .sidebar a.active {
+    color: #C084F5;
+    font-weight: bold;
+  }
+  
+  /* Основной контент */
+  main {
+    flex: 1;
+    padding: 20px;
+    margin-bottom: 70px; /* Чтобы не перекрывался футером */
+  }
+  
+  /* Геро-секция */
+  .hero {
+    background: #A8E6CF;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .hero button {
+    background: #D2B0F3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .hero button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Карточки */
+  .car-card, .promo-card {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .car-card:hover, .promo-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Фиксированный подвал */
+  .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #A8E6CF;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Мобильная версия */
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+    .sidebar {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    .fixed-footer {
+      font-size: 14px;
+      padding: 10px 0;
+    }
+  }
